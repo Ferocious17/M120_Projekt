@@ -1,6 +1,6 @@
 <?php
 
-class Home extends Controller
+class User extends Controller
 {
     protected $user;
 
@@ -16,9 +16,9 @@ class Home extends Controller
         $this->view('home/index', ['name' => $name, 'street' => "Street 33"]);
     }
 
-    public function createTable($param1, $param2, $param3, $param4)
+    public function show($var)
     {
-        $this->view('home/index', ['params' => [$param1, $param2, $param3, $param4]]);
+        $this->view('user/show', ['var' => $var]);
     }
 }
 
