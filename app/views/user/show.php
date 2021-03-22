@@ -1,5 +1,5 @@
 <?php
 
-echo $data['var'];
+echo $data['Firstname'];
 
 ?>

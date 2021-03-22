@@ -11,9 +11,14 @@ class User extends Controller
 
     public function index($name = '')
     {
-        $user = $this->user;
+        $user = $this->model('UserModel');
         $user->name = $name;
-        $this->view('home/index', ['name' => $name, 'street' => "Street 33"]);
+        $user->id = 1;
+        //$this->view('home/index', ['name' => $name, 'street' => "Street 33"]);
+
+        $firstname = $user->getFirstname();
+
+        $this->view('user/show', ['Firstname' => $firstname]);
     }
 
     public function show($var)
